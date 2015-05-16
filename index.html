@@ -49,7 +49,7 @@ background:none;}
                      <img src="images/logo-black.png" class="logo-img">
                    
                  </div>
-                 <button  class="btn btn-danger btn-view" onclick="return validata();" action="#page2"  type="submit" id="submit" value="提交">查看保单</button>
+                 <button  class="btn btn-danger btn-view" onclick="return validata();" action=".page2"  type="submit" id="submit" value="提交">查看保单</button>
                    
   
 </form>
@@ -142,7 +142,7 @@ background:none;}
     
    document.getElementById("check").onsubmit = function() {
     if(checkPassword()) {
-        window.location.href = "#page2"; // 如果想继续提交到action对应的链接，返回true即可
+        window.location.href = ".page2"; // 如果想继续提交到action对应的链接，返回true即可
     } else {
         return false;
     }
