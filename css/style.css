@@ -500,3 +500,11 @@ span.yes{
 	-o-animation:shake 1s linear 1 .1s forwards;
 	animation:shake 1s linear 1 .1s forwards;
 }
+/******************/
+.page2{
+	background:url(../images/profile-bg.jpg) no-repeat top center;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+}
