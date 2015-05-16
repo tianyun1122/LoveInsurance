@@ -80,7 +80,9 @@ background:none;}
          <div class="star"><img src="images/star.png"></div>
     </div>
     <div class="page page2">
-        2
+         <div class="profile-1">
+              <img src="images/p1.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png">
+         </div>
     </div>
     <div class="page page3" >
          3
@@ -181,8 +183,18 @@ $(function(){
 	});
 });
 </script>
+<script>
+$(function() {
+   $("body").bind('swiperight', function() {
+       $.mobile.changePage("#foo", {transition: "slide", reverse:true},false);
+   }).bind('swipeleft', function() {
+       $.mobile.changePage("#bar", { transition: "slide"},true);
+   });
+}); 
 
-
-
+$.mobile.changePage("save.html",
+   {type:"post", data:$("form#dataFrm").serialize(),transition:"slide"}
+); 
+</script>
 </body>
 </html>
