@@ -132,6 +132,7 @@ background:none;}
         reg=/^[1-9]\d*$/;   
         if(!reg.test(obj)){   
             $("#error-tip").css("display","block");  
+			$("#error-tip").html("请输入正确保单号");    
         }else{   
             
 			$("#error-tip").css("display","none");  
