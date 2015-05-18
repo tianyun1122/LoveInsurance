@@ -544,6 +544,7 @@ span.yes{
   100% {
     -webkit-transform: none;
     transform: none;
+	left:0;
   }
 }
 
@@ -578,6 +579,7 @@ span.yes{
   100% {
     -webkit-transform: none;
     transform: none;
+	left:0;
   }
 }
 
@@ -585,8 +587,11 @@ span.yes{
 .profile-2{
 	position:absolute;
     width:100%;	
-	-webkit-animation-name: bounceInLeft;
-    animation-name: bounceInLeft;
+	left:-50%;
+	-webkit-animation:bounceInLeft 1s linear 1 .1s forwards;
+	-moz-animation:bounceInLeft 1s linear 1 .1s forwards;
+	-o-animation:bounceInLeft 1s linear 1 .1s forwards;
+	animation:bounceInLeft 1s linear 1 .1s forwards;
 }
 .profile-2 img{
     width:100%;
