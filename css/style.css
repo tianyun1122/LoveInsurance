@@ -620,6 +620,7 @@ span.yes{
 }
 
 .slider-img{
+	display:none;
 	position:absolute;
     width:100%;
 	z-index:1000;
