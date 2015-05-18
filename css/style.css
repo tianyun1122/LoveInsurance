@@ -514,6 +514,7 @@ span.yes{
 	position:absolute;
 	left:0;
 	top:0;
+	width: 100%;
 	white-space: nowrap;
 	overflow-y: hidden;
 	overflow-x: auto;

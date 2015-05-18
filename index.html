@@ -36,7 +36,24 @@ background:none;}
 <div class="wp">
 <div class="wp-inner">
 
-    
+    <div class="page page2" id="page2">
+         <div class="profile-1">
+		      <span class="item"><img src="images/p1.png"></span>
+		      <span class="item"><img src="images/p2.png"></span>
+		      <span class="item"><img src="images/p3.png"></span>
+		      <span class="item"><img src="images/p4.png"></span>
+		      <span class="item"><img src="images/p5.png"></span>
+		      <span class="item"><img src="images/p1.png"></span>
+		      <span class="item"><img src="images/p1.png"></span>
+		      <span class="item"><img src="images/p1.png"></span>
+		      <span class="item"><img src="images/p1.png"></span>
+		      <span class="item"><img src="images/p1.png"></span>
+		      <span class="item"><img src="images/p1.png"></span>
+		      <span class="item"><img src="images/p1.png"></span>
+	     </div>
+         <div class="profile-2"><a href="111.html"><img src="images/left-heart.png"></a></div> 
+         <div class="profile-3"><img src="images/left-heart.png"></div>     
+    </div>
      
     <div class="page page1">
        
@@ -84,24 +101,7 @@ background:none;}
          <div class="rose-18"><img src="images/rose-8.png"></div>
          <div class="star"><img src="images/star.png"></div>
     </div>
-    <div class="page page2" id="page2">
-         <div class="profile-1">
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p2.png"></span>
-		      <span class="item"><img src="images/p3.png"></span>
-		      <span class="item"><img src="images/p4.png"></span>
-		      <span class="item"><img src="images/p5.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-	     </div>
-         <div class="profile-2"><a href="111.html"><img src="images/left-heart.png"></a></div> 
-         <div class="profile-3"><img src="images/left-heart.png"></div>     
-    </div>
+    
     <div class="page page3">
          3
     </div>
@@ -125,7 +125,106 @@ background:none;}
 
 
 
+<script src="js/zepto.min.js"></script> 
+<script src="js/zepto.fullpage.js"></script> 
+<script>
+        $('.wp-inner').fullpage();
+</script> 
+<script src="js/jquery-2.1.1.min.js"></script> 
+<script type="text/javascript">
+      function validata(){   
+        if($("#input-num").val()==""){   
+	    	$("#error-tip").css("display","block");  
+            $("#error-tip").html("请输入保单号");               
+            return false;   
+        }    
+    }      
+       
+   
+    function isString(obj){   
+        reg=/^[1-9]\d*$/;   
+        if(!reg.test(obj)){   
+            $("#error-tip").css("display","block");  
+			$("#error-tip").html("请输入正确保单号");    
+        }else{   
+            
+			$("#error-tip").css("display","none");  
+			$(".yes").css("display","block");  
+			$(".enter").addClass("success");
+        }   
+    }   
+    
+   document.getElementById("check").onsubmit = function() {
+    if(validata()) {
+        window.location.href = "#page2"; // 如果想继续提交到action对应的链接，返回true即可
+    } else {
+        return false;
+    }
+}
 
+
+
+       </script>
+<script>
+ window.onload=function(){
+	var is_open='on';
+	//var id = document.getElementById("loading");
+    //setTimeout(function(){document.body.removeChild(id)},1000);
+    if($("#audio_btn").attr("url").indexOf("mp3")>1){
+	
+	  var auto = is_open=='on' ? 'autoplay' : '';
+	  var html = '';
+	$("#audio_btn").attr("class","autoplay"); 
+	  
+	  $("#audio_btn").on('touchstart',function(){
+	
+		  var media = $("#media").get(0);
+		  var type = $("#audio_btn").attr("class");
+		  if(type=="on"){
+		    media.pause(); 
+			$("#audio_btn").attr("class","off");
+		  }else{
+			media.play();
+			$("#audio_btn").attr("class","on"); 
+	      }  
+	  })
+	 $("#play").on('touchstart',function(){
+	
+		  var type = $("#audio_btn").attr("class");
+		  var media = $("#media").get(0);
+		  if(type=="autoplay"){
+		  media.play();
+		  }
+		  $("#play").hide();
+	  });
+    }	
+	
+} //右上角，音乐播放器
+
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#subcodeDialog").click(function(){
+		$('#uedcool').popup({
+            position : 'window'
+    	}).popup("open");
+	});
+});
+</script>
+<script>
+$(function() {
+   $("body").bind('swiperight', function() {
+       $.mobile.changePage("#foo", {transition: "slide", reverse:true},false);
+   }).bind('swipeleft', function() {
+       $.mobile.changePage("#bar", { transition: "slide"},true);
+   });
+}); 
+
+$.mobile.changePage("save.html",
+   {type:"post", data:$("form#dataFrm").serialize(),transition:"slide"}
+); 
+</script>
 
 
 </body>
