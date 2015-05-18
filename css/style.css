@@ -512,7 +512,9 @@ span.yes{
 .profile-1{
     width:180%;
 	height:18%;
-	border:1px solid #000;	
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
 }
 @-webkit-keyframes bounceInLeft {
 0%{
