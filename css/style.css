@@ -631,7 +631,7 @@ span.yes{
 }
 .slider-img{
 	display:inline-block;
-    width:18%;
+    width:100%;
 	margin-left:1%;	
 }
 .slider-img img{
