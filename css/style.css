@@ -551,8 +551,6 @@ span.yes{
 	opacity:1;	
 }
 }
-
-
 .profile-2{
 	position:absolute;
     width:100%;	
@@ -564,5 +562,55 @@ span.yes{
 	animation:bounceInLeft 1s linear 1 .1s forwards;
 }
 .profile-2 img{
+    width:100%;
+}
+@-webkit-keyframes bounceInRight {
+0%{
+	opacity:1;
+}
+50%{
+	right:-40%;
+}
+70%{
+	right:-50%;
+}
+90%{
+	right:-40%;
+}
+100%{
+    right:-50%;	
+	opacity:1;	
+}
+}
+
+@keyframes bounceInRight {
+0%{
+	opacity:1;
+}
+50%{
+	right:-40%;
+}
+70%{
+	right:-50%;
+}
+90%{
+	right:-40%;
+}
+100%{
+    right:-50%;	
+	opacity:1;	
+}
+}
+.profile-3{
+	position:absolute;
+    width:100%;	
+	left:-100%;
+	opacity:0;
+	-webkit-animation:bounceInRight 1s linear 1 .1s forwards;
+	-moz-animation:bounceInRight 1s linear 1 .1s forwards;
+	-o-animation:bounceInRight 1s linear 1 .1s forwards;
+	animation:bounceInRight 1s linear 1 .1s forwards;
+}
+.profile-3 img{
     width:100%;
 }
