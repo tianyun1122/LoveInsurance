@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/zepto.fullpage.css">
 <link rel="stylesheet" href="css/global.css">
 <link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/slider.css">
 <link rel="stylesheet" href="css/style.css">
 <style type="text/css">
 .ui-popup-container.ui-popup-active{position:absolute; left:0 !important; top:0 !important;max-width:100% !important; width:100%; height:100% !important; z-index:100000;}
@@ -77,22 +78,37 @@ background:none;}
          <div class="star"><img src="images/star.png"></div>
     </div>
     <div class="page page2" id="page2">
-         <div class="profile-1">
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p2.png"></span>
-		      <span class="item"><img src="images/p3.png"></span>
-		      <span class="item"><img src="images/p4.png"></span>
-		      <span class="item"><img src="images/p5.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-		      <span class="item"><img src="images/p1.png"></span>
-	     </div>
+         
+
+<div id="slider">
+    <div>
+        <a href="http://www.lanrentuku.com/" target="_blank"><img lazyload="images/pic_1.jpg"></a>
+        <p>1.让Coron的太阳把自己晒黑&mdash;小天</p>
+    </div>
+    <div>
+        <a href="http://www.lanrentuku.com/" target="_blank"><img lazyload="images/pic_2.png"></a>
+        <p>2.让Coron的太阳把自己晒黑&mdash;小天</p>
+    </div>
+    <div>
+        <a href="http://www.lanrentuku.com/" target="_blank"><img lazyload="images/pic_3.png"></a>
+        <p>3.让Coron的太阳把自己晒黑&mdash;小天</p>
+    </div>
+    <div>
+        <a href="http://www.lanrentuku.com/" target="_blank"><img lazyload="images/pic_4.jpg"></a>
+        <p>4.让Coron的太阳把自己晒黑&mdash;小天</p>
+    </div>
+</div>
+<script>
+    
+    $('#slider').slider({loop:true});
+</script>
+
+         
          <div class="profile-2"><a href="111.html"><img src="images/left-heart.png"></a></div> 
          <div class="profile-3"><img src="images/left-heart.png"></div>     
+         投保人：李书仁   
+         心上人：张琳娜
+         已有1132人祝福
     </div>
     <div class="page page3">
          3
@@ -217,7 +233,9 @@ $.mobile.changePage("save.html",
    {type:"post", data:$("form#dataFrm").serialize(),transition:"slide"}
 ); 
 </script>
-
+<script src="js/zepto.extend.js"></script>
+<script src="js/zepto.ui.js"></script>
+<script src="js/widget/slider.js"></script>
 
 </body>
 </html>
