@@ -629,3 +629,11 @@ span.yes{
 	border: 1px solid blue;
 	margin: 10px;
 }
+.slider-img{
+	display:inline-block;
+    width:18%;
+	margin-left:1%;	
+}
+.slider-img img{
+    width:100%;
+}
