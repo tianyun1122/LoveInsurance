@@ -510,11 +510,15 @@ span.yes{
 	background-size: 100%;
 }
 .profile-1{
+	position:absolute;
     width:180%;
 	height:18%;
+	left:0;
+	top:0;
 	white-space: nowrap;
 	overflow-y: hidden;
 	overflow-x: auto;
+	z-index:1000;
 }
 @-webkit-keyframes bounceInLeft {
 0%{
