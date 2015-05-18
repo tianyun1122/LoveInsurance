@@ -355,6 +355,7 @@ i {
 .rose-one img{width:100%;}
 .logo{
 
+
 	width:70%;
 	left:15%;
 	right:15%;
@@ -510,9 +511,15 @@ span.yes{
 	background-size: 100%;
 }
 .profile-1{
+	position:absolute;
+	left:0;
+	top:0;
 	white-space: nowrap;
-		overflow-y: hidden;
-		overflow-x: auto;
+	overflow-y: hidden;
+	overflow-x: auto;
+	z-index:1000;
+	background:rgba(251,250,250,.38);
+	box-shadow:0 3px 3px rgba(0,0,0,.4);
 }
 @-webkit-keyframes bounceInLeft {
 0%{
