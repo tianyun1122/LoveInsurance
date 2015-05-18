@@ -518,8 +518,18 @@ span.yes{
 0%{
 	opacity:1;
 }
+70%{
+	left:10%;
+}
+80%{
+	left:0;
+}
+90%{
+	left:10%;
+}
 100%{
-	left:50%	
+    left:0;	
+	opacity:1;	
 }
 }
 
@@ -527,8 +537,18 @@ span.yes{
 0%{
 	opacity:1;
 }
+70%{
+	left:10%;
+}
+80%{
+	left:0;
+}
+90%{
+	left:10%;
+}
 100%{
-    left:50%	
+    left:0;	
+	opacity:1;	
 }
 }
 
