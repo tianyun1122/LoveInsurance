@@ -515,73 +515,21 @@ span.yes{
 	overflow:hidden;	
 }
 @-webkit-keyframes bounceInLeft {
-  0%, 60%, 75%, 90%, 100% {
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
-
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-3000px, 0, 0);
-    transform: translate3d(-3000px, 0, 0);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: translate3d(25px, 0, 0);
-    transform: translate3d(25px, 0, 0);
-  }
-
-  75% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  90% {
-    -webkit-transform: translate3d(5px, 0, 0);
-    transform: translate3d(5px, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: none;
-    transform: none;
-	left:0;
-  }
+    0%{
+		opacity:0;
+	}
+	100%{
+	opacity:1;	
+	}
 }
 
 @keyframes bounceInLeft {
-  0%, 60%, 75%, 90%, 100% {
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
-
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-3000px, 0, 0);
-    transform: translate3d(-3000px, 0, 0);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: translate3d(25px, 0, 0);
-    transform: translate3d(25px, 0, 0);
-  }
-
-  75% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  90% {
-    -webkit-transform: translate3d(5px, 0, 0);
-    transform: translate3d(5px, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: none;
-    transform: none;
-	left:0;
-  }
+0%{
+		opacity:0;
+	}
+	100%{
+	opacity:1;	
+	}
 }
 
 
@@ -589,10 +537,11 @@ span.yes{
 	position:absolute;
     width:100%;	
 	left:-50%;
-	-webkit-animation: 1s linear 1 .1s forwards;
-	-moz-animation: 1s linear 1 .1s forwards;
-	-o-animation: 1s linear 1 .1s forwards;
-	animation: 1s linear 1 .1s forwards;
+	opacity:0;
+	-webkit-animation:bounceInLeft 1s linear 1 .1s forwards;
+	-moz-animation:bounceInLeft 1s linear 1 .1s forwards;
+	-o-animation:bounceInLeft 1s linear 1 .1s forwards;
+	animation:bounceInLeft 1s linear 1 .1s forwards;
 }
 .profile-2 img{
     width:100%;
