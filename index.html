@@ -43,7 +43,7 @@ background:none;}
               <div class="slider-img"><img src="images/p5.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></div>
               <div class="slider-img"><img src="images/p1.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></div>
          </div>
-                  
+               
          <div class="profile-2"><a href="111.html"><img src="images/left-heart.png"></a></div> 
          <div class="profile-3"><img src="images/left-heart.png"></div>     
          投保人：李书仁   
@@ -213,6 +213,7 @@ $(function(){
 		 _slider.eq(0).css("display","block").siblings("display","none");
 		 
 			$(".profile-1").touchmove(function(){
+				alert(111);
 				for(var i=0; i<_slider.length; i++){
 			        _slider.eq(i).css("display","block").siblings("display","none");
 			        _slider.eq(i).css("left",i*100+"%"); 
