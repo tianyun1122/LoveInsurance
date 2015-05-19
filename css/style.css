@@ -515,6 +515,8 @@ span.yes{
 	left:0;
 	top:0;
 	width:100%;
+	height:60px;
+	z-index:1000;
 	background:rgba(251,250,250,.38);
 	box-shadow:0 3px 3px rgba(0,0,0,.4);
 }
