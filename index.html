@@ -97,7 +97,7 @@ html, body {
 /* Swipe 2 required styles */
 
 .swipe {
-	opacity:0;
+	opacity:1;
   overflow: hidden;
   height:100px;
   position: relative;
@@ -304,7 +304,7 @@ window.mySwipe = Swipe(elem, {
 
 </script>
 <script>
-$('.page1').bind("touchstart",function(){
+$('.page2').bind("touchstart",function(){
 	if($('.page2').hasClass("cur")){
 		$(".swipe").css("opacity","1");
 	}
