@@ -52,20 +52,6 @@ background:none;}
               <div class="slider-img"><img src="images/p1.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></div>
          </div>
                
-               
-         <div id="demo">
-              <div class="container">
-                   <div class="row">
-                        <div class="span12">
-                             <div id="owl-demo" class="owl-carousel">
-                                  <div><img src="http://placehold.it/1170x300/42bdc2/FFFFFF"></div>
-                                  <div><img src="http://placehold.it/1170x400/42bdc2/FFFFFF"></div>
-                                  <div><img src="http://placehold.it/1170x500/42bdc2/FFFFFF"></div>
-                             </div>
-                        </div>
-                   </div>
-              </div>
-         </div>
          <div class="profile-2"><a href="111.html"><img src="images/left-heart.png"></a></div> 
          <div class="profile-3"><img src="images/left-heart.png"></div>     
          投保人：李书仁   
@@ -232,47 +218,18 @@ $(function(){
 <script type="text/javascript">
      $(function(){
 		 var _slider = $(".slider-img");
-		 _slider.eq(0).css("display","block").siblings("display","none");
+		 _slider.eq(0).css("display","block").siblings().css("display","none");
 		 for(var i=0; i<_slider.length; i++){
-			 _slider.eq(i).css("display","block").siblings("display","none");
+			 _slider.eq(i).css("display","block").siblings().css("display","none");
 		     _slider.eq(i).css("left",i*100+"%"); 
 			 $(".profile-1").touchmove(function(){
-                  _slider.eq(index).animate({"left":(i-1)*100+"%"},1000);  
+                  _slider.eq(i).animate({"left":(i-1)*100+"%"},1000);  
 		    });
 		 }
      });
 </script>
 
-<script src="js1/owl.carousel.js"></script>
-    <!-- Demo -->
-    <style>
-    #owl-demo .owl-item div{
-      padding:5px;
-    }
-    #owl-demo .owl-item img{
-      display: block;
-      width: 100%;
-      height: auto;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-    }
-    </style>
 
-    <script>
-    $(document).ready(function() {
-      $("#owl-demo").owlCarousel({
-        autoPlay : 3000,
-        stopOnHover : true,
-        navigation:true,
-        paginationSpeed : 1000,
-        goToFirstSpeed : 2000,
-        singleItem : true,
-        autoHeight : true,
-        transitionStyle:"fade"
-      });
-    });
-    </script>
 
 </body>
 </html>
