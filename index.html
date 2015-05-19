@@ -215,7 +215,7 @@ $(function(){
 			$(".profile-1").touchmove(function(){
 				for(var i=0; i<_slider.length; i++){
 			        _slider.eq(i).css("display","block").siblings("display","none");
-		            _slider.eq(i).css("left",i*100+"%"); 
+		            //_slider.eq(i).css("left",i*100+"%"); 
 					_slider.eq(i).animate({"left":(i-1)*100+"%"},1000); 
 				 }
 		    });
