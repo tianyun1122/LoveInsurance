@@ -17,9 +17,12 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/slider.css">
-<!-- Owl Carousel Assets -->
-    <link href="js1/owl.carousel.css" rel="stylesheet">
-    <link href="js1/owl.theme.css" rel="stylesheet">
+
+<meta nam="description" content="Swipe is a lightweight mobile slider with 1:1 touch movement, resistant bounds, scroll prevention, and completely library agnostic.">
+<meta name="keywords" content="Swipe, JS, javascript, 移动设备, 手机网页, 滑块, 触摸">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="main.css">
 <style type="text/css">
 .ui-popup-container.ui-popup-active{position:absolute; left:0 !important; top:0 !important;max-width:100% !important; width:100%; height:100% !important; z-index:100000;}
 .ui-body-a, .ui-overlay-a {
@@ -36,6 +39,32 @@ background-image: none !important;
 background-image: none !important;
 background:none;}
 </style>
+<style>
+.swipe {
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+}
+.swipe-wrap {
+	overflow: hidden;
+	position: relative;
+}
+.swipe-wrap > figure {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+.erweima {text-align:center;}
+.erweima img {border:6px solid #FFF; margin-right:20px;}
+
+.title {background-color:#222; width:100%; position:fixed; top:0; left:0; font-size:12px; font-family:Verdana, Geneva, sans-serif; z-index:99999;}
+.title a {color:#999; text-decoration:none; line-height:24px; padding:0 10px; letter-spacing: 1px;}
+.title_r {float:right;}
+.title_l {float:left;}
+.title a:hover {background:#000;}
+
+</style>
 </head>
 <body>
 <!--<audio loop src="music/I-would-like-to.mp3" id="media" autoplay ></audio>-->
@@ -46,12 +75,21 @@ background:none;}
 <div class="wp">
 <div class="wp-inner">
  <div class="page page2" id="page2">
-         <div class="profile-1">
-              <div class="slider-img"><img src="images/p1.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></div>
-              <div class="slider-img"><img src="images/p5.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></div>
-              <div class="slider-img"><img src="images/p1.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></div>
-         </div>
-               
+         
+               <div id="slider" class="swipe profile-1" style="visibility:visible;">  
+    <div class="swipe-wrap">  
+        <figure>  
+            <div>  
+                <img src="images/explorations1.jpg" width="100%" height="100%" />  
+            </div>  
+        </figure>  
+        <figure>  
+            <div>  
+                <img src="images/explorations2.jpg" width="100%" height="100%" />  
+            </div>              
+        </figure>  
+    </div>  
+</div>  
          <div class="profile-2"><a href="111.html"><img src="images/left-heart.png"></a></div> 
          <div class="profile-3"><img src="images/left-heart.png"></div>     
          投保人：李书仁   
@@ -215,18 +253,23 @@ $(function(){
 });
 </script>
 
-<script type="text/javascript">
-     $(function(){
-		 var _slider = $(".slider-img");
-		 _slider.eq(0).css("display","block").siblings().css("display","none");
-		 for(var i=0; i<_slider.length; i++){
-			 _slider.eq(i).css("display","block").siblings().css("display","none");
-		     _slider.eq(i).css("left",i*100+"%"); 
-			 $(".profile-1").touchmove(function(){
-                  _slider.eq(i).animate({"left":(i-1)*100+"%"},1000);  
-		    });
-		 }
-     });
+<script src="swipe.js"></script> 
+<script>
+var slider =
+  Swipe(document.getElementById('slider'), {
+    auto: 3000,
+    continuous: true,
+    callback: function(pos) {
+
+      var i = bullets.length;
+      while (i--) {
+        bullets[i].className = ' ';
+      }
+      bullets[pos].className = 'on';
+
+    }
+  });
+var bullets = document.getElementById('position').getElementsByTagName('li');
 </script>
 
 
