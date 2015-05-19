@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/slider.css">
+<link href="css/owl.carousel.css" rel="stylesheet">
 <style type="text/css">
 .ui-popup-container.ui-popup-active{position:absolute; left:0 !important; top:0 !important;max-width:100% !important; width:100%; height:100% !important; z-index:100000;}
 .ui-body-a, .ui-overlay-a {
@@ -43,7 +44,32 @@ background:none;}
               <div class="slider-img"><img src="images/p5.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></div>
               <div class="slider-img"><img src="images/p1.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></div>
          </div>
-               
+               <div id="owl-demo" class="owl-carousel">
+              <div><img src="http://placehold.it/1170x300/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x400/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x500/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x200/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x500/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x250/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x350/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x300/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x100/42bdc2/FFFFFF"></div>
+              <div><img src="http://placehold.it/1170x500/42bdc2/FFFFFF"></div>
+            </div>
+            <style>
+    #owl-demo .owl-item div{
+      padding:5px;
+    }
+    #owl-demo .owl-item img{
+      display: block;
+      width: 100%;
+      height: auto;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+	.owl-carousel img{width:100%;}
+    </style>
          <div class="profile-2"><a href="111.html"><img src="images/left-heart.png"></a></div> 
          <div class="profile-3"><img src="images/left-heart.png"></div>     
          投保人：李书仁   
@@ -234,6 +260,6 @@ $(function(){
       });
     });
     </script>
-
+<script src="js/owl.carousel.js"></script>
 </body>
 </html>
