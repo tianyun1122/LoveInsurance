@@ -3,7 +3,9 @@
 
 body {
 	/*background: url(../images/rose-bg.jpg) top center no-repeat fixed;*/
-	font-family: 方正兰亭细黑;
+	font-family: 楷体;
+	color:#000;
+	text-shadow:none;
 }
 .page {
 	position: relative;
@@ -515,24 +517,26 @@ span.yes{
 	left:0;
 	top:0;
 	width:100%;
+	height:60px;
+	z-index:1000;
 	background:rgba(251,250,250,.38);
-	box-shadow:0 3px 3px rgba(0,0,0,.4);
+	box-shadow:0 3px 3px rgba(0,0,0,.2);
 }
 @-webkit-keyframes bounceInLeft {
 0%{
 	opacity:1;
 }
 50%{
-	left:-40%;
+	left:-80%;
 }
 70%{
-	left:-50%;
+	left:-100%;
 }
 90%{
-	left:-40%;
+	left:-90%;
 }
 100%{
-    left:-50%;	
+    left:-100%;	
 	opacity:1;	
 }
 }
@@ -542,23 +546,24 @@ span.yes{
 	opacity:1;
 }
 50%{
-	left:-40%;
+	left:-80%;
 }
 70%{
-	left:-50%;
+	left:-100%;
 }
 90%{
-	left:-40%;
+	left:-90%;
 }
 100%{
-    left:-50%;	
+    left:-100%;	
 	opacity:1;	
 }
 }
 .profile-2{
 	position:absolute;
-    width:100%;	
-	left:-100%;
+    width:165%;	
+	left:-150%;
+	top:8%;
 	opacity:0;
 	-webkit-animation:bounceInLeft 1s linear 1 .1s forwards;
 	-moz-animation:bounceInLeft 1s linear 1 .1s forwards;
@@ -573,16 +578,16 @@ span.yes{
 	opacity:1;
 }
 50%{
-	right:-40%;
+	right:-110%;
 }
 70%{
-	right:-50%;
+	right:-145%;
 }
 90%{
-	right:-40%;
+	right:-120%;
 }
 100%{
-    right:-50%;	
+    right:-145%;
 	opacity:1;	
 }
 }
@@ -592,24 +597,25 @@ span.yes{
 	opacity:1;
 }
 50%{
-	right:-40%;
+	right:-110%;
 }
 70%{
-	right:-50%;
+	right:-145%;
 }
 90%{
-	right:-40%;
+	right:-120%;
 }
 100%{
-    right:-50%;	
+    right:-145%;
 	opacity:1;	
 }
 }
 .profile-3{
 	position:absolute;
-    width:100%;	
-	left:-100%;
+    width:200%;	
+	right:-200%;
 	opacity:0;
+	top:10%;
 	-webkit-animation:bounceInRight 1s linear 1 .1s forwards;
 	-moz-animation:bounceInRight 1s linear 1 .1s forwards;
 	-o-animation:bounceInRight 1s linear 1 .1s forwards;
@@ -628,4 +634,43 @@ span.yes{
 .slider-img img{
     width:18%;
 	margin-left:1.8%;	
+}
+.profile-4{
+    position:absolute;	
+	top:18%;
+	left:20%;
+	width:60%;
+	font-size:18px;
+	color:#000;
+	text-align:center;
+	text-shadow:none;
+	z-index:21;	
+}
+.profile-4 img{
+    width:100%;
+	margin-bottom:5%;
+}
+.profile-4 i{
+	display:block;
+	margin-top:5%;
+    font-size:22px;
+}
+.profile-4 i b{
+    font-size:30px;
+	color:#e22440;
+}
+.profile-5{
+    position:absolute;
+	width:100%;
+	top:15%;
+	z-index:20;	
+}
+.profile-5 img{
+    width:100%;
+}
+
+/**********以下是第3屏**********/
+.page3{
+    background:url(../images/voucher.jpg) no-repeat;
+	background-size:100% 100%;	
 }

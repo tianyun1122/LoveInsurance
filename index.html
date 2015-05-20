@@ -4,11 +4,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="description" content="jQuery Responsive Carousel - Owl Carusel">
-<meta name="author" content="Bartosz Wojciechowski">
-<!-- Owl Carousel Assets -->
-<link href="js1/owl.carousel.css" rel="stylesheet">
-<link href="js1/owl.theme.css" rel="stylesheet">
 <title>爱情保险RoseOne</title>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
 <link rel="stylesheet" href="css/zepto.fullpage.css">
@@ -16,13 +11,7 @@
 <link rel="stylesheet" href="css/animate.css">
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/slider.css">
 
-<meta nam="description" content="Swipe is a lightweight mobile slider with 1:1 touch movement, resistant bounds, scroll prevention, and completely library agnostic.">
-<meta name="keywords" content="Swipe, JS, javascript, 移动设备, 手机网页, 滑块, 触摸">
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="stylesheet" href="main.css">
 <style type="text/css">
 .ui-popup-container.ui-popup-active{position:absolute; left:0 !important; top:0 !important;max-width:100% !important; width:100%; height:100% !important; z-index:100000;}
 .ui-body-a, .ui-overlay-a {
@@ -40,29 +29,47 @@ background-image: none !important;
 background:none;}
 </style>
 <style>
+#console {
+  font-size: 12px;
+  font-family:"Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  color: #999;
+  line-height: 18px;
+  margin-top: 20px;
+  max-height: 150px;
+  overflow: auto;
+}
+#mySwipe div b {
+  display:block;
+  padding-top:2%;
+  text-align:center;
+  background:rgba(255,255,255,0.5);
+  box-shadow:0 5px 3px rgba(0,0,0,0.45);
+}
+#mySwipe div b:after{   content: "."; 
+    display: block;
+    height: 0; 
+    clear: both; 
+    visibility: hidden;}
+
+#mySwipe div b em{ float:left; display:block; width:18%; margin-left:2%;}
+#mySwipe div b em:first-child{margin-left:0;}
+#mySwipe div b em img{width:80%; border-radius:50%; border:3px solid #fff;}
 .swipe {
-	overflow: hidden;
-	visibility: hidden;
-	position: relative;
+	display:none;
+  overflow: hidden;
+  height:100px;
+  position: relative;
 }
 .swipe-wrap {
-	overflow: hidden;
-	position: relative;
+  overflow: hidden;
+  position: absolute;
+  height:100px;
 }
-.swipe-wrap > figure {
-	float: left;
-	width: 100%;
-	position: relative;
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
 }
-
-.erweima {text-align:center;}
-.erweima img {border:6px solid #FFF; margin-right:20px;}
-
-.title {background-color:#222; width:100%; position:fixed; top:0; left:0; font-size:12px; font-family:Verdana, Geneva, sans-serif; z-index:99999;}
-.title a {color:#999; text-decoration:none; line-height:24px; padding:0 10px; letter-spacing: 1px;}
-.title_r {float:right;}
-.title_l {float:left;}
-.title a:hover {background:#000;}
 
 </style>
 </head>
@@ -70,43 +77,19 @@ background:none;}
 <!--<audio loop src="music/I-would-like-to.mp3" id="media" autoplay ></audio>-->
 <div id="audio_btn" url="music/I-would-like-to.mp3" class="off"></div>
 <div class="fixed-bottom"><button class="btn btn-danger" id="subcodeDialog">我的保单</button><button class="btn btn-warning">申请售后</button></div>
-
-
 <div class="wp">
 <div class="wp-inner">
- <div class="page page2" id="page2">
-         
-               <div id="slider" class="swipe profile-1" style="visibility:visible;">  
-    <div class="swipe-wrap">  
-        <figure>  
-            <div>  
-                <img src="images/explorations1.jpg" width="100%" height="100%" />  
-            </div>  
-        </figure>  
-        <figure>  
-            <div>  
-                <img src="images/explorations2.jpg" width="100%" height="100%" />  
-            </div>              
-        </figure>  
-    </div>  
-</div>  
-         <div class="profile-2"><a href="111.html"><img src="images/left-heart.png"></a></div> 
-         <div class="profile-3"><img src="images/left-heart.png"></div>     
-         投保人：李书仁   
-         心上人：张琳娜
-         已有1132人祝福
-    </div>
-<div class="page page1">
-<div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0;">
+
+     <div class="page page1">
+          <div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0;">
     <div class="envelope">
                  <div class="enter">
                   <form id="check" action="#page2" method="post">
                      <span class="error" id="error-tip"></span>
                      <div class="envelope-input"><span class="yes"><img src="images/yes.png"></span><input id="input-num" type="number" data-role="none" placeholder="请输入保单号" onblur="isString(this.value)"></div>      
                      <img src="images/logo-black.png" class="logo-img">
-                   
                  </div>
-                 <button  class="btn btn-danger btn-view" onclick="return validata();"  type="submit" id="submit" value="提交">查看保单</button>
+                 <button class="btn btn-danger btn-view" onclick="return validata();"  type="submit" id="submit" value="提交">查看保单</button>
 </form>            
             </div>
 </div>
@@ -135,66 +118,69 @@ background:none;}
          <div class="rose-18"><img src="images/rose-8.png"></div>
          <div class="star"><img src="images/star.png"></div>
     </div>
+
+    <div class="page page2">
+         <div class="profile-2"><img src="images/left-heart.png"></div> 
+         <div class="profile-3"><img src="images/right-heart.png"></div>   
+         <div class="profile-4">
+              <img src="images/ProfilePhotos.png">
+              投保人：李书仁<br>  
+              心上人：张琳娜 
+              <i>已有<b>1132</b>人祝福</i>
+          </div>
+          <div class="profile-5"><img src="images/profile-5.png"></div>
+    </div>
     
     <div class="page page3">
-         3
+        <!--投保人：李书仁         性别：男
+        身份证：110152199602016138 
+        心上人：张琳娜         性别：女
+        1）自保险签订日起3年后，李书仁和张琳娜结婚，
+        婚礼现场Rose One将会送上一万朵玫瑰；
+        2）保险签订日：2015年6月1日；
+        3）本保险计划适用长安责任保险有限公司“爱情保险”
+        条款以及《万朵玫瑰礼品赠送条款》。-->
     </div>
     <div class="page page4">
-         4
+         444444444444444444444444444
     </div>
     <div class="page page5">
-         5
+         55555555555555555555
     </div>
     <div class="page page6">
-         
+         6666666666666666666
     </div>
     <div class="page page7">
-         
+         77777777777777777
     </div>
-    <div class="page page8">
-        
-    </div>
+    <div class="page page8"></div>
 </div>
 </div>
-
-
-
+<div id='mySwipe' style='position:fixed; z-index:100000;width:100% !important; height:100px;' class='swipe'>
+       <div class='swipe-wrap' style="z-index:100000;height:100px;">
+       <div><b><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>  
+       <div><b class="clearfix"><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>  
+       <div><b class="clearfix"><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>   
+  </div>
 <script src="js/zepto.min.js"></script> 
 <script src="js/zepto.fullpage.js"></script> 
 <script>
-        $('.wp-inner').fullpage();
+     $('.wp-inner').fullpage({
+     afterLoad: function(anchorLink, index) {
+         if (index == 2) {
+             $(".swipe").show();
+         } else {
+             $(".swipe").hide();
+         }
+     }
+ });
+		
+		
 </script> 
 <script src="js/jquery-2.1.1.min.js"></script> 
 
-<script src="swipe.js"></script> 
-<script>
-var slider =
-  Swipe(document.getElementById('slider'), {
-    auto: 3000,
-    continuous: true,
-    callback: function(pos) {
-
-      var i = bullets.length;
-      while (i--) {
-        bullets[i].className = ' ';
-      }
-      bullets[pos].className = 'on';
-    }
-  });
-var bullets = document.getElementById('position').getElementsByTagName('li');
-</script>
-
-
-
-
-
-
-         <script>  
-              $('#slider').slider({loop:true});
-         </script>     
-         <script src="js/zepto.extend.js"></script>
-         <script src="js/zepto.ui.js"></script>
-         <script src="js/widget/slider.js"></script>    
+    
+    
 <script type="text/javascript">
       function validata(){   
         if($("#input-num").val()==""){   
@@ -203,15 +189,12 @@ var bullets = document.getElementById('position').getElementsByTagName('li');
             return false;   
         }    
     }      
-       
-   
     function isString(obj){   
         reg=/^[1-9]\d*$/;   
         if(!reg.test(obj)){   
             $("#error-tip").css("display","block");  
 			$("#error-tip").html("请输入正确保单号");    
-        }else{   
-            
+        }else{    
 			$("#error-tip").css("display","none");  
 			$(".yes").css("display","block");  
 			$(".enter").addClass("success");
@@ -225,12 +208,9 @@ var bullets = document.getElementById('position').getElementsByTagName('li');
         return false;
     }
 }
-
-
-
-       </script>
+</script>
 <script>
- window.onload=function(){
+ $(function(){
 	var is_open='on';
 	//var id = document.getElementById("loading");
     //setTimeout(function(){document.body.removeChild(id)},1000);
@@ -263,7 +243,7 @@ var bullets = document.getElementById('position').getElementsByTagName('li');
 	  });
     }	
 	
-} //右上角，音乐播放器
+}); //右上角，音乐播放器
 
 </script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -277,8 +257,42 @@ $(function(){
 });
 </script>
 
+<script src='js/swipe.js'></script>
+<script>
+
+// pure JS
+var elem = document.getElementById('mySwipe');
+window.mySwipe = Swipe(elem, {
+  // startSlide: 4,
+  // auto: 3000,
+  // continuous: true,
+  // disableScroll: true,
+  // stopPropagation: true,
+  // callback: function(index, element) {},
+  // transitionEnd: function(index, element) {}
+});
+
+// with jQuery
+// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+
+</script>
+<script>
+$(function(){
+     $('.page2').bind("touchstart",function(){
+	    if($('.page2').hasClass("cur")){
+		     $(".swipe").css("opacity","1");
+	    }
+	    else{
+	         // alert(222);   
+             $(".swipe").css("opacity","0");
+	    }
+
+     });	
+ 	
+});
 
 
+</script>
 
 
 </body>
