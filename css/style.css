@@ -561,9 +561,9 @@ span.yes{
 }
 .profile-2{
 	position:absolute;
-    width:150%;	
+    width:165%;	
 	left:-150%;
-	top:10%;
+	top:8%;
 	opacity:0;
 	-webkit-animation:bounceInLeft 1s linear 1 .1s forwards;
 	-moz-animation:bounceInLeft 1s linear 1 .1s forwards;
@@ -578,16 +578,16 @@ span.yes{
 	opacity:1;
 }
 50%{
-	right:-80%;
+	right:-110%;
 }
 70%{
-	right:-100%;
+	right:-145%;
 }
 90%{
-	right:-80%;
+	right:-120%;
 }
 100%{
-    right:-100%;	
+    right:-145%;
 	opacity:1;	
 }
 }
@@ -597,23 +597,23 @@ span.yes{
 	opacity:1;
 }
 50%{
-	right:-80%;
+	right:-110%;
 }
 70%{
-	right:-100%;
+	right:-145%;
 }
 90%{
-	right:-80%;
+	right:-120%;
 }
 100%{
-    right:-100%;	
+    right:-145%;
 	opacity:1;	
 }
 }
 .profile-3{
 	position:absolute;
-    width:150%;	
-	right:-150%;
+    width:200%;	
+	right:-200%;
 	opacity:0;
 	top:10%;
 	-webkit-animation:bounceInRight 1s linear 1 .1s forwards;
@@ -637,13 +637,14 @@ span.yes{
 }
 .profile-4{
     position:absolute;	
-	top:20%;
+	top:18%;
 	left:20%;
 	width:60%;
 	font-size:18px;
 	color:#000;
 	text-align:center;
 	text-shadow:none;
+	z-index:21;	
 }
 .profile-4 img{
     width:100%;
@@ -657,4 +658,13 @@ span.yes{
 .profile-4 i b{
     font-size:30px;
 	color:#e22440;
+}
+.profile-5{
+    position:absolute;
+	width:100%;
+	top:15%;
+	z-index:20;	
+}
+.profile-5 img{
+    width:100%;
 }
