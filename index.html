@@ -38,18 +38,24 @@ background:none;}
   max-height: 150px;
   overflow: auto;
 }
-
 #mySwipe div b {
   display:block;
   padding-top:2%;
   text-align:center;
-  box-shadow: 0 5px #aaa;
   background:rgba(255,255,255,0.5);
-  box-shadow:0 5px 3px rgba(0,0,0,0.35);
+  box-shadow:0 5px 3px rgba(0,0,0,0.45);
 }
-#mySwipe div b img{width:18%; margin-left:1.8%;}
+#mySwipe div b:after{   content: "."; 
+    display: block;
+    height: 0; 
+    clear: both; 
+    visibility: hidden;}
+
+#mySwipe div b em{ float:left; display:block; width:18%; margin-left:2%;}
+#mySwipe div b em:first-child{margin-left:0;}
+#mySwipe div b em img{width:80%; border-radius:50%; border:3px solid #fff;}
 .swipe {
-	opacity:1;
+	display:none;
   overflow: hidden;
   height:100px;
   position: relative;
@@ -83,7 +89,7 @@ background:none;}
                      <div class="envelope-input"><span class="yes"><img src="images/yes.png"></span><input id="input-num" type="number" data-role="none" placeholder="请输入保单号" onblur="isString(this.value)"></div>      
                      <img src="images/logo-black.png" class="logo-img">
                  </div>
-                 <button  class="btn btn-danger btn-view" onclick="return validata();"  type="submit" id="submit" value="提交">查看保单</button>
+                 <button class="btn btn-danger btn-view" onclick="return validata();"  type="submit" id="submit" value="提交">查看保单</button>
 </form>            
             </div>
 </div>
@@ -126,35 +132,50 @@ background:none;}
     </div>
     
     <div class="page page3">
-         3
+        <!--投保人：李书仁         性别：男
+        身份证：110152199602016138 
+        心上人：张琳娜         性别：女
+        1）自保险签订日起3年后，李书仁和张琳娜结婚，
+        婚礼现场Rose One将会送上一万朵玫瑰；
+        2）保险签订日：2015年6月1日；
+        3）本保险计划适用长安责任保险有限公司“爱情保险”
+        条款以及《万朵玫瑰礼品赠送条款》。-->
     </div>
     <div class="page page4">
-         4
+         444444444444444444444444444
     </div>
     <div class="page page5">
-         5
+         55555555555555555555
     </div>
     <div class="page page6">
-         
+         6666666666666666666
     </div>
     <div class="page page7">
-         
+         77777777777777777
     </div>
-    <div class="page page8">
-        
-    </div>
+    <div class="page page8"></div>
 </div>
 </div>
 <div id='mySwipe' style='position:fixed; z-index:100000;width:100% !important; height:100px;' class='swipe'>
        <div class='swipe-wrap' style="z-index:100000;height:100px;">
-       <div><b><img src="images/p1.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></b></div>  
-       <div><b><img src="images/p5.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></b></div>  
-       <div><b><img src="images/p1.png"><img src="images/p2.png"><img src="images/p3.png"><img src="images/p4.png"><img src="images/p5.png"></b></div>  
+       <div><b><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>  
+       <div><b class="clearfix"><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>  
+       <div><b class="clearfix"><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>   
   </div>
 <script src="js/zepto.min.js"></script> 
 <script src="js/zepto.fullpage.js"></script> 
 <script>
-        $('.wp-inner').fullpage();
+     $('.wp-inner').fullpage({
+     afterLoad: function(anchorLink, index) {
+         if (index == 2) {
+             $(".swipe").show();
+         } else {
+             $(".swipe").hide();
+         }
+     }
+ });
+		
+		
 </script> 
 <script src="js/jquery-2.1.1.min.js"></script> 
 
@@ -173,8 +194,7 @@ background:none;}
         if(!reg.test(obj)){   
             $("#error-tip").css("display","block");  
 			$("#error-tip").html("请输入正确保单号");    
-        }else{   
-            
+        }else{    
 			$("#error-tip").css("display","none");  
 			$(".yes").css("display","block");  
 			$(".enter").addClass("success");
@@ -190,7 +210,7 @@ background:none;}
 }
 </script>
 <script>
- window.onload=function(){
+ $(function(){
 	var is_open='on';
 	//var id = document.getElementById("loading");
     //setTimeout(function(){document.body.removeChild(id)},1000);
@@ -223,7 +243,7 @@ background:none;}
 	  });
     }	
 	
-} //右上角，音乐播放器
+}); //右上角，音乐播放器
 
 </script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -257,15 +277,23 @@ window.mySwipe = Swipe(elem, {
 
 </script>
 <script>
-$('.page2').bind("touchstart",function(){
-	if($('.page2').hasClass("cur")){
-		$(".swipe").css("opacity","1");
-	}
-	else{
-	    // alert(222);   
-        $(".swipe").css("opacity","0");
-	}
+$(function(){
+     $('.page2').bind("touchstart",function(){
+	    if($('.page2').hasClass("cur")){
+		     $(".swipe").css("opacity","1");
+	    }
+	    else{
+	         // alert(222);   
+             $(".swipe").css("opacity","0");
+	    }
+
+     });	
+ 	
 });
+
+
 </script>
+
+
 </body>
 </html>
