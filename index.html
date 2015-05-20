@@ -165,15 +165,15 @@ background:none;}
 <script src="js/zepto.min.js"></script> 
 <script src="js/zepto.fullpage.js"></script> 
 <script>
-      $('.wp-inner').fullpage({
-     afterLoad: function(anchorLink, index) {
-         if (index == 2) {
-             $(".swipe").css("opacity", 1);
-         } else {
-             $(".swipe").css("opacity", 0);
-         }
-     }
- });
+     $('.wp-inner').fullpage({
+        afterChange: function (e) {
+                if (e.cur == 1) {
+                 $(".swipe").fadeIn();
+             } else {
+                 $(".swipe").fadeOut();
+             }
+            }
+     });
 		
 		
 </script> 
