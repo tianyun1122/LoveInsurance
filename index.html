@@ -55,7 +55,6 @@ background:none;}
 #mySwipe div b em:first-child{margin-left:0;}
 #mySwipe div b em img{width:80%; border-radius:50%; border:3px solid #fff;}
 .swipe {
-
   overflow: hidden;
   height:100px;
   position: relative;
@@ -79,6 +78,8 @@ background:none;}
 <div class="fixed-bottom"><button class="btn btn-danger" id="subcodeDialog">我的保单</button><button class="btn btn-warning">申请售后</button></div>
 <div class="wp">
 <div class="wp-inner">
+     
+     
 
      <div class="page page1">
           <div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0;">
@@ -130,17 +131,15 @@ background:none;}
           </div>
           <div class="profile-5"><img src="images/profile-5.png"></div>
     </div>
-    
     <div class="page page3">
-        <!--投保人：李书仁         性别：男
-        身份证：110152199602016138 
-        心上人：张琳娜         性别：女
-        1）自保险签订日起3年后，李书仁和张琳娜结婚，
-        婚礼现场Rose One将会送上一万朵玫瑰；
-        2）保险签订日：2015年6月1日；
-        3）本保险计划适用长安责任保险有限公司“爱情保险”
-        条款以及《万朵玫瑰礼品赠送条款》。-->
+        <div class="voucher-left">投保人：李书仁<i>性别：男</i></div>         
+        <div class="voucher-right top-2">身份证：110152199602016138</div>
+        <div class="voucher-left top-3">心上人：张琳娜<i>性别：女</i></div>         
+        <div class="voucher-right top-4">1）自保险签订日起3年后，李书仁和张琳娜结婚，婚礼现场Rose One将会送上一万朵玫瑰；</div>
+        <div class="voucher-left top-5">2）保险签订日：2015年6月1日；</div>
+        <div class="voucher-right top-6">3）本保险计划适用长安责任保险有限公司“爱情保险”条款以及《万朵玫瑰礼品赠送条款》。</div>
     </div>
+    
     <div class="page page4">
          444444444444444444444444444
     </div>
@@ -153,7 +152,9 @@ background:none;}
     <div class="page page7">
          77777777777777777
     </div>
-    <div class="page page8"></div>
+    <div class="page page8">
+         888888888888888888
+    </div>
 </div>
 </div>
 <div id='mySwipe' style='position:fixed; z-index:100000;width:100% !important; height:100px;' class='swipe'>
@@ -165,22 +166,17 @@ background:none;}
 <script src="js/zepto.min.js"></script> 
 <script src="js/zepto.fullpage.js"></script> 
 <script>
-     $('.wp-inner').fullpage({
+   $('.wp-inner').fullpage({
         afterChange: function (e) {
-                if (e.cur == 1) {
+                if (e.cur == 0) {
                  $(".swipe").fadeIn();
              } else {
-                 $(".swipe").fadeOut();
+                 $(".swipe").css("display","none");
              }
             }
-     });
-		
-		
+     });	
 </script> 
-<script src="js/jquery-2.1.1.min.js"></script> 
-
-    
-    
+<script src="js/jquery-2.1.1.min.js"></script>    
 <script type="text/javascript">
       function validata(){   
         if($("#input-num").val()==""){   
@@ -276,7 +272,23 @@ window.mySwipe = Swipe(elem, {
 // window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
 
 </script>
+<script>
+$(function(){
+     $('.page2').bind("touchstart",function(){
+	    if($('.page2').hasClass("cur")){
+		     $(".swipe").css("opacity","1");
+	    }
+	    else{
+	         // alert(222);   
+             $(".swipe").css("opacity","0");
+	    }
 
+     });	
+ 	
+});
+
+
+</script>
 
 
 </body>
