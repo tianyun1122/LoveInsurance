@@ -931,34 +931,6 @@ span.yes{
 	background:url(../images/would-text.png) no-repeat center center;
 	background-size:100%;
 }
-@-webkit-keyframes zoomOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-	-webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-  }
-}
-
-@keyframes zoomOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-	-webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-  }
-}
-.anImg .s7 p{	}
-
-@-webkit-keyframes downTxt{
-	0%{opacity:0;-webkit-transform:scale(20);}
-	30%{opacity:0;-webkit-transform:scale(5);}
-	100%{opacity:1;-webkit-transform:scale(1);}
-}
 .page5-1{
     background:url(../images/bg-1.jpg) no-repeat top center;	
 	background-size:100%;
