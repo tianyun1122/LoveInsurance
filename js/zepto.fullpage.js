@@ -139,6 +139,7 @@
             this.status = 0;
         },
         moveTo: function(next, anim) {
+				
             var that = this;
             var $this = that.$this;
             var cur = that.curIndex;
@@ -186,12 +187,15 @@
             this.moveTo(this.curIndex - 1, anim);
         },
         moveNext: function(anim) {
+		
             this.moveTo(this.curIndex + 1, anim);
         }
     });
 
     $.fn.fullpage = function(option) {
+		
         if (!fullpage) {
+			
             fullpage = new Fullpage($(this), option);
         }
         return this;
@@ -202,6 +206,7 @@
             if (!fullpage) {
                 return 0;
             }
+			
             fullpage[val].apply(fullpage, [].slice.call(arguments, 0));
         };
     });
