@@ -29,6 +29,7 @@ background-image: none !important;
 background:none;}
 </style>
 <style>
+<<<<<<< HEAD
 .swipe-wrap{
   top:30px;	
 }
@@ -45,6 +46,47 @@ background:none;}
    color:#4c4c4c;
    background:rgba(255,255,255,0.5);
    text-shadow:none;
+=======
+#console {
+  font-size: 12px;
+  font-family:"Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  color: #999;
+  line-height: 18px;
+  margin-top: 20px;
+  max-height: 150px;
+  overflow: auto;
+}
+#mySwipe div b {
+  display:block;
+  padding-top:2%;
+  text-align:center;
+  background:rgba(255,255,255,0.5);
+  box-shadow:0 5px 5px rgba(0,0,0,0.11);
+}
+#mySwipe div b:after{   content: "."; 
+    display: block;
+    height: 0; 
+    clear: both; 
+    visibility: hidden;}
+
+#mySwipe div b em{ float:left; display:block; width:18%; margin-left:2%;}
+#mySwipe div b em:first-child{margin-left:0;}
+#mySwipe div b em img{width:80%; border-radius:50%; border:3px solid #fff;}
+.swipe {
+  overflow: hidden;
+  height:100px;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: absolute;
+  height:100px;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+>>>>>>> origin/gh-pages
 }
 .bless i{padding:0 2%;font-size:1.4rem;font-weight:bold;color:#dc3a25;}
 .swipe-wrap div b:after{   content: "."; 
@@ -53,6 +95,7 @@ background:none;}
     clear: both; 
     visibility: hidden;}
 
+<<<<<<< HEAD
 .swipe-wrap div b em{ float:left; display:block; width:18%; margin-left:2%;}
 .swipe-wrap div b em:first-child{margin-left:0;}
 .swipe-wrap div b em img{width:80%; border-radius:50%; border:3px solid #fff;}
@@ -69,15 +112,25 @@ background:none;}
 .swipe-wrap > div img{
   border-bottom:1px solid #ccc;	
 }
+=======
+>>>>>>> origin/gh-pages
 </style>
 </head>
 <body>
 <audio loop src="music/I-would-like-to.mp3" id="media" autoplay ></audio>
 <div id="audio_btn" url="music/I-would-like-to.mp3" class="off"></div>
+<<<<<<< HEAD
 <div class="fixed-bottom"><button class="btn btn-danger" id="subcodeDialog">查看保单</button><button class="btn btn-warning">申请售后</button></div>
 <div class="down"><a id="ToPage25"><img src="images/down.png"></a></div>
 <div class="come-shop">进入商城购买</div>
 <div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0; display:none;">
+=======
+<div class="fixed-bottom"><button class="btn btn-danger" id="subcodeDialog">我的保单</button><button class="btn btn-warning">申请售后</button></div>
+<div class="wp">
+<div class="wp-inner">
+     <div class="page page1">
+          <div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0;">
+>>>>>>> origin/gh-pages
     <div class="envelope">
                  <div class="enter">
                   <form id="check" method="post">
@@ -86,7 +139,12 @@ background:none;}
                      <span class="error-name" id="error-tip-name"></span>  
                      <div class="envelope-input-name"><span class="yes"><img src="images/yes.png"></span><input id="input-name" type="number" data-role="none" placeholder="姓名" onblur="isString(this.value)"></div>  
                      <img src="images/logo-black.png" class="logo-img">
+<<<<<<< HEAD
                      <button class="btn btn-danger btn-view"  id="ToPage2" type="submit" value="提交">查看保单</button>
+=======
+                 </div>
+                 <button class="btn btn-danger btn-view" onclick="return validata();"  type="submit" id="submit" value="提交">查看保单</button>
+>>>>>>> origin/gh-pages
 </form>            
                  </div>
                  
@@ -121,6 +179,7 @@ background:none;}
          <div class="rose-18"><img src="images/rose-8.png"></div>
          <div class="star"><img src="images/star.png"></div>
     </div>
+<<<<<<< HEAD
     <div class="page page26">
         <div class="page26-1">
              <img src="images/list-4.png">
@@ -130,6 +189,65 @@ background:none;}
         <div class="page26-3"><img src="images/list-1.png"></div>
         <div class="logo"><img src="images/logo.png"></div>
         <div class="page26-4"><img src="images/list-3.png"></div>
+=======
+    <div class="page page1">
+          <div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0;">
+    <div class="envelope">
+                 <div class="enter">
+                  <form id="check" action="#page2" method="post">
+                     <span class="error" id="error-tip"></span>
+                     <div class="envelope-input"><span class="yes"><img src="images/yes.png"></span><input id="input-num" type="number" data-role="none" placeholder="请输入保单号" onblur="isString(this.value)"></div>      
+                     <img src="images/logo-black.png" class="logo-img">
+                 </div>
+                 <button class="btn btn-danger btn-view" onclick="return validata();"  type="submit" id="submit" value="提交">查看保单</button>
+</form>            
+            </div>
+</div>
+         <div id="play" style="position:absolute;width:100%; height:100%;background:url(images/rose-2-bg.png) no-repeat; background-size:100%; z-index:26; opacity:0;"></div>
+         <div class="rose-one-1"><img src="images/rose-one-1.png"></div>
+         <div class="rose-one-2"><img src="images/rose-one-2.png"></div>
+         <div class="logo"><img src="images/logo.png"></div>
+         <div class="rose-9"><img src="images/rose-9.png"></div>
+         <div class="rose-10"><img src="images/rose-10.png"></div>
+         <div class="rose-12"><img src="images/rose-12.png"></div>
+         <div class="rose-13"><img src="images/rose-13.png"></div>
+         <div class="rose-14"><img src="images/rose-14.png"></div>
+         <div class="rose-15"><img src="images/rose-15.png"></div>
+         <div class="rose-16"><img src="images/rose-16.png"></div>
+         <!--以上是静的-->
+         <div class="rose-1"><img src="images/rose-1.png"></div>
+         <div class="rose-2"><img src="images/rose-2.png"></div>
+         <div class="rose-3"><img src="images/rose-3.png"></div>
+         <div class="rose-4"><img src="images/rose-4.png"></div>
+         <div class="rose-5"><img src="images/rose-5.png"></div>
+         <div class="rose-6"><img src="images/rose-6.png"></div>
+         <div class="rose-7"><img src="images/rose-7.png"></div>
+         <div class="rose-8"><img src="images/rose-8.png"></div>
+         <div class="rose-7 rose-7-1"><img src="images/rose-7.png"></div>
+         <div class="rose-14 rose-14-1"><img src="images/rose-14.png"></div>
+         <div class="rose-17"><img src="images/rose-7.png"></div>
+         <div class="rose-18"><img src="images/rose-8.png"></div>
+         <div class="star"><img src="images/star.png"></div>
+    </div>
+    <div class="page page2">
+         <div class="profile-2"><img src="images/left-heart.png"></div> 
+         <div class="profile-3"><img src="images/right-heart.png"></div>   
+         <div class="profile-4">
+              <img src="images/ProfilePhotos.png">
+              投保人：李书仁<br>  
+              心上人：张琳娜 
+              <i>已有<b>1132</b>人祝福</i>
+          </div>
+          <div class="profile-5"><img src="images/profile-5.png"></div>
+    </div>
+    <div class="page page3">
+        <div class="voucher-left">投保人：李书仁<i>性别：男</i></div>         
+        <div class="voucher-right top-2">身份证：110152199602016138</div>
+        <div class="voucher-left top-3">心上人：张琳娜<i>性别：女</i></div>         
+        <div class="voucher-right top-4">1）自保险签订日起3年后，李书仁和张琳娜结婚，婚礼现场Rose One将会送上一万朵玫瑰；</div>
+        <div class="voucher-left top-5">2）保险签订日：2015年6月1日；</div>
+        <div class="voucher-right top-6">3）本保险计划适用长安责任保险有限公司“爱情保险”条款以及《万朵玫瑰礼品赠送条款》。</div>
+>>>>>>> origin/gh-pages
     </div>
     <div class="page page4">
          <div class="would-1"></div>
@@ -140,9 +258,17 @@ background:none;}
          <div class="would-1 page5-1"></div>
          <div class="page5-5">
               <div class="round">
+<<<<<<< HEAD
                    <div class="line"></div>                
               </div>
               <div class="round-in"></div>  
+=======
+                   <div class="line"></div>
+                   
+              </div>
+              <div class="round-in"></div>
+              
+>>>>>>> origin/gh-pages
          </div>
          <div class="page5-2">
               <p></p>
@@ -164,6 +290,7 @@ background:none;}
          </div>
     </div>
     <div class="page page6">
+<<<<<<< HEAD
          <div class="would-1 page6-1"></div>
          <div class="page5-5 page6-5">
               <div class="round">
@@ -484,10 +611,29 @@ background:none;}
     </div>
 </div>
 </div>
+=======
+         66666666666666666666
+    </div>
+    <div class="page page7">
+         77777777777777777777
+    </div>
+    <div class="page page8">
+         88888888888888888888
+    </div>
+</div>
+</div>
+<!--<div id='mySwipe' style='position:fixed; z-index:100000;width:100% !important; height:100px;' class='swipe'>
+       <div class='swipe-wrap' style="z-index:100000;height:100px;">
+       <div><b><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>  
+       <div><b class="clearfix"><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>  
+       <div><b class="clearfix"><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>   
+  </div>-->
+>>>>>>> origin/gh-pages
 <script src="js/zepto.min.js"></script> 
 <script src="js/zepto.fullpage.js"></script> 
 <script>
    $('.wp-inner').fullpage({
+<<<<<<< HEAD
 	   
      });	
 </script>
@@ -508,6 +654,19 @@ $(function(){
         window.location.href="index-2.html";
 	});
 });
+=======
+        afterChange: function (e) {
+                if (e.cur == 0) {
+                 $(".swipe").fadeIn();
+             } else {
+                 $(".swipe").css("display","none");
+             }
+            }
+     });	
+</script> 
+<script src="js/jquery-2.1.1.min.js"></script>    
+<script type="text/javascript">
+>>>>>>> origin/gh-pages
       function validata(){   
         if($("#input-num").val()==""){   
 	    	$("#error-tip").css("display","block");  
@@ -520,7 +679,11 @@ $(function(){
             return false;   
         }  
     }      
+<<<<<<< HEAD
     function isNumber(obj){   
+=======
+    function isString(obj){   
+>>>>>>> origin/gh-pages
         reg=/^[1-9]\d*$/;   
         if(!reg.test(obj)){   
             $("#error-tip").css("display","block");  
@@ -543,6 +706,16 @@ $(function(){
         }   
     }   
     
+<<<<<<< HEAD
+=======
+   document.getElementById("check").onsubmit = function() {
+    if(validata()) {
+        window.location.href = "#page2"; // 如果想继续提交到action对应的链接，返回true即可
+    } else {
+        return false;
+    }
+}
+>>>>>>> origin/gh-pages
 </script>
 <script>
  $(function(){
@@ -600,6 +773,42 @@ $(function(){
 });
 </script>
 
+<script src='js/swipe.js'></script>
+<script>
 
+<<<<<<< HEAD
+=======
+// pure JS
+var elem = document.getElementById('mySwipe');
+window.mySwipe = Swipe(elem, {
+  // startSlide: 4,
+  // auto: 3000,
+  // continuous: true,
+  // disableScroll: true,
+  // stopPropagation: true,
+  // callback: function(index, element) {},
+  // transitionEnd: function(index, element) {}
+});
+
+// with jQuery
+// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+
+</script>
+<script>
+$(function(){
+     $('.page2').bind("touchstart",function(){
+	    if($('.page2').hasClass("cur")){
+		     $(".swipe").css("opacity","1");
+	    }
+	    else{
+	         // alert(222);   
+             $(".swipe").css("opacity","0");
+	    }
+     });		
+});
+</script>
+
+
+>>>>>>> origin/gh-pages
 </body>
 </html>
