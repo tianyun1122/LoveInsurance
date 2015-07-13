@@ -1,814 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>爱情保险RoseOne</title>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
-<link rel="stylesheet" href="css/zepto.fullpage.css">
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/animate.css">
-
-<link rel="stylesheet" href="css/style.css">
-
-<style type="text/css">
-.ui-popup-container.ui-popup-active{position:absolute; left:0 !important; top:0 !important;max-width:100% !important; width:100%; height:100% !important; z-index:100000;}
-.ui-body-a, .ui-overlay-a {
-/* border: 1px solid #444; */
-/* background: #222; */
-/* color: #fff; */
-/* text-shadow: 0 1px 0 #111; */
-/* font-weight: 400; */
-/* background-image: -webkit-gradient(linear,left top,left bottom,from(#444),to(#222)); */
-/* background-image: -webkit-linear-gradient(#444,#222); */
-background-image: none !important;
-background-image: none !important;
-background-image: none !important;
-background-image: none !important;
-background:none;}
-</style>
-<style>
-<<<<<<< HEAD
-.swipe-wrap{
-  top:30px;	
-}
-.bless{
-   display:block;
-   position:absolute;
-   top:0;
-   left:0;
-   width:100% !important;
-   padding-left:5px;
-   height:30px;
-   z-index:35;
-   font-size:1rem;
-   color:#4c4c4c;
-   background:rgba(255,255,255,0.5);
-   text-shadow:none;
-=======
-#console {
-  font-size: 12px;
-  font-family:"Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-  color: #999;
-  line-height: 18px;
-  margin-top: 20px;
-  max-height: 150px;
-  overflow: auto;
-}
-#mySwipe div b {
-  display:block;
-  padding-top:2%;
-  text-align:center;
-  background:rgba(255,255,255,0.5);
-  box-shadow:0 5px 5px rgba(0,0,0,0.11);
-}
-#mySwipe div b:after{   content: "."; 
-    display: block;
-    height: 0; 
-    clear: both; 
-    visibility: hidden;}
-
-#mySwipe div b em{ float:left; display:block; width:18%; margin-left:2%;}
-#mySwipe div b em:first-child{margin-left:0;}
-#mySwipe div b em img{width:80%; border-radius:50%; border:3px solid #fff;}
-.swipe {
-  overflow: hidden;
-  height:100px;
-  position: relative;
-}
-.swipe-wrap {
-  overflow: hidden;
-  position: absolute;
-  height:100px;
-}
-.swipe-wrap > div {
-  float:left;
-  width:100%;
-  position: relative;
->>>>>>> origin/gh-pages
-}
-.bless i{padding:0 2%;font-size:1.4rem;font-weight:bold;color:#dc3a25;}
-.swipe-wrap div b:after{   content: "."; 
-    display: block;
-    height: 0; 
-    clear: both; 
-    visibility: hidden;}
-
-<<<<<<< HEAD
-.swipe-wrap div b em{ float:left; display:block; width:18%; margin-left:2%;}
-.swipe-wrap div b em:first-child{margin-left:0;}
-.swipe-wrap div b em img{width:80%; border-radius:50%; border:3px solid #fff;}
-.swipe-wrap {
-  overflow: hidden;
-  position: absolute;
-
-}
-.swipe-wrap > div {
-  float:left;
-  width:100%;
-  position: relative;
-}
-.swipe-wrap > div img{
-  border-bottom:1px solid #ccc;	
-}
-=======
->>>>>>> origin/gh-pages
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/style.css" media="screen" />
 </head>
+
 <body>
-<audio loop src="music/I-would-like-to.mp3" id="media" autoplay ></audio>
-<div id="audio_btn" url="music/I-would-like-to.mp3" class="off"></div>
-<<<<<<< HEAD
-<div class="fixed-bottom"><button class="btn btn-danger" id="subcodeDialog">查看保单</button><button class="btn btn-warning">申请售后</button></div>
-<div class="down"><a id="ToPage25"><img src="images/down.png"></a></div>
-<div class="come-shop">进入商城购买</div>
-<div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0; display:none;">
-=======
-<div class="fixed-bottom"><button class="btn btn-danger" id="subcodeDialog">我的保单</button><button class="btn btn-warning">申请售后</button></div>
-<div class="wp">
-<div class="wp-inner">
-     <div class="page page1">
-          <div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0;">
->>>>>>> origin/gh-pages
-    <div class="envelope">
-                 <div class="enter">
-                  <form id="check" method="post">
-                     <span class="error" id="error-tip"></span>
-                     <div class="envelope-input"><span class="yes"><img src="images/yes.png"></span><input id="input-num" type="number" data-role="none" placeholder="请输入保单号" onblur="isNumber(this.value)"></div>   
-                     <span class="error-name" id="error-tip-name"></span>  
-                     <div class="envelope-input-name"><span class="yes"><img src="images/yes.png"></span><input id="input-name" type="number" data-role="none" placeholder="姓名" onblur="isString(this.value)"></div>  
-                     <img src="images/logo-black.png" class="logo-img">
-<<<<<<< HEAD
-                     <button class="btn btn-danger btn-view"  id="ToPage2" type="submit" value="提交">查看保单</button>
-=======
-                 </div>
-                 <button class="btn btn-danger btn-view" onclick="return validata();"  type="submit" id="submit" value="提交">查看保单</button>
->>>>>>> origin/gh-pages
-</form>            
-                 </div>
-                 
-            </div>
+<div class="header">
+     麒麟睿泉科技（北京）有限公司
 </div>
-<div class="wp">
-<div class="wp-inner">
-    <div class="page page1">
-         <div id="play" style="position:absolute;width:100%; height:100%;background:url(images/rose-2-bg.png) no-repeat; background-size:100%; z-index:26; z-index:10000; opacity:0;"></div>
-         <div class="rose-one-1"><img src="images/rose-one-1.png"></div>
-         <div class="rose-one-2"><img src="images/rose-one-2.png"></div>
-         <div class="logo"><img src="images/logo.png"></div>
-         <div class="rose-9"><img src="images/rose-9.png"></div>
-         <div class="rose-10"><img src="images/rose-10.png"></div>
-         <div class="rose-12"><img src="images/rose-12.png"></div>
-         <div class="rose-13"><img src="images/rose-13.png"></div>
-         <div class="rose-14"><img src="images/rose-14.png"></div>
-         <div class="rose-15"><img src="images/rose-15.png"></div>
-         <div class="rose-16"><img src="images/rose-16.png"></div>
-         <!--以上是静的-->
-         <div class="rose-1"><img src="images/rose-1.png"></div>
-         <div class="rose-2"><img src="images/rose-2.png"></div>
-         <div class="rose-3"><img src="images/rose-3.png"></div>
-         <div class="rose-4"><img src="images/rose-4.png"></div>
-         <div class="rose-5"><img src="images/rose-5.png"></div>
-         <div class="rose-6"><img src="images/rose-6.png"></div>
-         <div class="rose-7"><img src="images/rose-7.png"></div>
-         <div class="rose-8"><img src="images/rose-8.png"></div>
-         <div class="rose-7 rose-7-1"><img src="images/rose-7.png"></div>
-         <div class="rose-14 rose-14-1"><img src="images/rose-14.png"></div>
-         <div class="rose-17"><img src="images/rose-7.png"></div>
-         <div class="rose-18"><img src="images/rose-8.png"></div>
-         <div class="star"><img src="images/star.png"></div>
-    </div>
-<<<<<<< HEAD
-    <div class="page page26">
-        <div class="page26-1">
-             <img src="images/list-4.png">
-        </div>
-        <div class="page26-2"><img src="images/list-7.png"></div>
-        <div class="page26-5"><img src="images/list-6.png"></div>
-        <div class="page26-3"><img src="images/list-1.png"></div>
-        <div class="logo"><img src="images/logo.png"></div>
-        <div class="page26-4"><img src="images/list-3.png"></div>
-=======
-    <div class="page page1">
-          <div data-role="popup" id="uedcool" data-theme="a" style="position:absolute;z-index:1000; width:100%; height:100%;left:0; top:0;">
-    <div class="envelope">
-                 <div class="enter">
-                  <form id="check" action="#page2" method="post">
-                     <span class="error" id="error-tip"></span>
-                     <div class="envelope-input"><span class="yes"><img src="images/yes.png"></span><input id="input-num" type="number" data-role="none" placeholder="请输入保单号" onblur="isString(this.value)"></div>      
-                     <img src="images/logo-black.png" class="logo-img">
-                 </div>
-                 <button class="btn btn-danger btn-view" onclick="return validata();"  type="submit" id="submit" value="提交">查看保单</button>
-</form>            
-            </div>
-</div>
-         <div id="play" style="position:absolute;width:100%; height:100%;background:url(images/rose-2-bg.png) no-repeat; background-size:100%; z-index:26; opacity:0;"></div>
-         <div class="rose-one-1"><img src="images/rose-one-1.png"></div>
-         <div class="rose-one-2"><img src="images/rose-one-2.png"></div>
-         <div class="logo"><img src="images/logo.png"></div>
-         <div class="rose-9"><img src="images/rose-9.png"></div>
-         <div class="rose-10"><img src="images/rose-10.png"></div>
-         <div class="rose-12"><img src="images/rose-12.png"></div>
-         <div class="rose-13"><img src="images/rose-13.png"></div>
-         <div class="rose-14"><img src="images/rose-14.png"></div>
-         <div class="rose-15"><img src="images/rose-15.png"></div>
-         <div class="rose-16"><img src="images/rose-16.png"></div>
-         <!--以上是静的-->
-         <div class="rose-1"><img src="images/rose-1.png"></div>
-         <div class="rose-2"><img src="images/rose-2.png"></div>
-         <div class="rose-3"><img src="images/rose-3.png"></div>
-         <div class="rose-4"><img src="images/rose-4.png"></div>
-         <div class="rose-5"><img src="images/rose-5.png"></div>
-         <div class="rose-6"><img src="images/rose-6.png"></div>
-         <div class="rose-7"><img src="images/rose-7.png"></div>
-         <div class="rose-8"><img src="images/rose-8.png"></div>
-         <div class="rose-7 rose-7-1"><img src="images/rose-7.png"></div>
-         <div class="rose-14 rose-14-1"><img src="images/rose-14.png"></div>
-         <div class="rose-17"><img src="images/rose-7.png"></div>
-         <div class="rose-18"><img src="images/rose-8.png"></div>
-         <div class="star"><img src="images/star.png"></div>
-    </div>
-    <div class="page page2">
-         <div class="profile-2"><img src="images/left-heart.png"></div> 
-         <div class="profile-3"><img src="images/right-heart.png"></div>   
-         <div class="profile-4">
-              <img src="images/ProfilePhotos.png">
-              投保人：李书仁<br>  
-              心上人：张琳娜 
-              <i>已有<b>1132</b>人祝福</i>
-          </div>
-          <div class="profile-5"><img src="images/profile-5.png"></div>
-    </div>
-    <div class="page page3">
-        <div class="voucher-left">投保人：李书仁<i>性别：男</i></div>         
-        <div class="voucher-right top-2">身份证：110152199602016138</div>
-        <div class="voucher-left top-3">心上人：张琳娜<i>性别：女</i></div>         
-        <div class="voucher-right top-4">1）自保险签订日起3年后，李书仁和张琳娜结婚，婚礼现场Rose One将会送上一万朵玫瑰；</div>
-        <div class="voucher-left top-5">2）保险签订日：2015年6月1日；</div>
-        <div class="voucher-right top-6">3）本保险计划适用长安责任保险有限公司“爱情保险”条款以及《万朵玫瑰礼品赠送条款》。</div>
->>>>>>> origin/gh-pages
-    </div>
-    <div class="page page4">
-         <div class="would-1"></div>
-         <div class="would-2"><img src="images/would-3.png"></div>
-         <div class="would-3"></div>
-    </div>
-    <div class="page page5">
-         <div class="would-1 page5-1"></div>
-         <div class="page5-5">
-              <div class="round">
-<<<<<<< HEAD
-                   <div class="line"></div>                
-              </div>
-              <div class="round-in"></div>  
-=======
-                   <div class="line"></div>
-                   
-              </div>
-              <div class="round-in"></div>
-              
->>>>>>> origin/gh-pages
-         </div>
-         <div class="page5-2">
-              <p></p>
-              <img src="images/1.jpg">
-         </div>
-         <div class="page5-3">
-              <div class="flower1"><img src="images/flower1.png"></div>
-              <div class="flower2"><img src="images/flower2.png"></div>
-              <div class="flower3"><img src="images/flower3.png"></div>
-              <div class="flower4"><img src="images/flower4.png"></div>
-              <div class="flower5"><img src="images/flower5.png"></div>
-              <div class="flower6"><img src="images/flower6.png"></div>
-              <div class="flower7"><img src="images/flower7.png"></div>
-              <div class="flower8"><img src="images/flower8.png"></div>
-              <div class="flower9"><img src="images/flower9.png"></div>
-         </div>
-         <div class="page5-4">
-              <img src="images/logo-2.png">
-         </div>
-    </div>
-    <div class="page page6">
-<<<<<<< HEAD
-         <div class="would-1 page6-1"></div>
-         <div class="page5-5 page6-5">
-              <div class="round">
-                   <div class="line"></div>    
-              </div>
-              <div class="round-in"></div>       
-         </div>
-         <div class="page6-2">
-              <p></p>
-              <img src="images/2.jpg">
-         </div>
-         <div class="page6-3">
-              <img src="images/logo-4.png">
-         </div>
-         <div class="page5-3">
-              <div class="flower1"><img src="images/flower1.png"></div>
-              <div class="flower2"><img src="images/flower2.png"></div>
-              <div class="flower3"><img src="images/flower3.png"></div>
-              <div class="flower4"><img src="images/flower4.png"></div>
-              <div class="flower5"><img src="images/flower5.png"></div>
-              <div class="flower6"><img src="images/flower6.png"></div>
-              <div class="flower7"><img src="images/flower7.png"></div>
-              <div class="flower8"><img src="images/flower8.png"></div>
-              <div class="flower9"><img src="images/flower9.png"></div>
-         </div>
-    </div>
-    <div class="page page7">
-         <div class="would-1 page7-1"></div>
-         <div class="page5-3">
-              <div class="flower1"><img src="images/flower1.png"></div>
-              <div class="flower2"><img src="images/flower2.png"></div>
-              <div class="flower3"><img src="images/flower3.png"></div>
-              <div class="flower4"><img src="images/flower4.png"></div>
-              <div class="flower5"><img src="images/flower5.png"></div>
-              <div class="flower6"><img src="images/flower6.png"></div>
-              <div class="flower7"><img src="images/flower7.png"></div>
-              <div class="flower8"><img src="images/flower8.png"></div>
-              <div class="flower9"><img src="images/flower9.png"></div>
-         </div>
-         <div class="page5-5 page7-5">
-              <div class="round">
-                   <div class="line"></div>    
-
-              </div>
-              <div class="round-in"></div>       
-         </div>
-         <div class="page7-2">
-              <p></p>
-              <img src="images/3.png">
-         </div>
-         <div class="page7-6"><img src="images/would-3.png"></div>
-    </div>
-    <div class="page page8">
-         <div class="would-1 page8-1"></div>
-         <div class="page7-6 page8-3"><img src="images/would-3.png"></div>
-         <div class="page8-2">
-              <p></p>
-              <img src="images/4.jpg">
-         </div>
-         <div class="page5-5 page8-5">
-              <div class="round">
-                   <div class="line"></div>    
-
-              </div>
-              <div class="round-in"></div>       
-         </div>
-    </div>
-    <div class="page page9">
-         <div class="would-1 page9-1"></div>
-         <div class="page9-2">
-              <p></p>
-              <img src="images/5.png">
-         </div>
-         <div class="page9-3"><img src="images/flower-4.png"></div>
-         <div class="page7-6 page9-4"><img src="images/would-3.png"></div>
-         <div class="page5-5 page9-5">
-              <div class="round">
-                   <div class="line"></div>    
-              </div>
-              <div class="round-in"></div>       
-         </div>
-    </div>
-    <div class="page page10">
-         <div class="would-1 page10-1"></div>
-         <div class="page10-2">
-              <p></p>
-              <img src="images/6.jpg">
-         </div>
-         <div class="page7-6 page10-4"><img src="images/would-3.png"></div>
-         <div class="page10-5">
-              <div class="round">
-                   <div class="line"></div>                
-              </div>
-              <div class="round-in"></div>  
-         </div>
-    </div>
-    <div class="page page11">
-          <div class="would-1 page11-1"></div>
-          <div class="page11-2">
-              <p></p>
-              <img src="images/7.jpg">
-          </div>
-          <div class="page7-6 page11-4"><img src="images/would-3.png"></div>
-          <div class="page11-5">
-               <div class="round">
-                   <div class="line"></div>                
-               </div>
-               <div class="round-in"></div>  
-          </div>
+<div class="container">
+<div class="left">
+     <h1>押金收据</h1>
+     <div class="tele">答疑电话：
+     <span>010-57106489</span>
      </div>
-     <div class="page page12">
-          <div class="would-1 page12-1"></div>
-          <div class="page12-2">
-              <p></p>
-              <img src="images/8.jpg">
-          </div>
-          <div class="page7-6 page12-4"><img src="images/would-3.png"></div>
-          <div class="page12-5">
-               <div class="round">
-                   <div class="line"></div>                
-               </div>
-               <div class="round-in"></div>  
-          </div>
-     </div>
-    <div class="page page13">
-          <div class="would-1 page13-1"></div>
-          <div class="page13-2">
-              <p></p>
-              <img src="images/9.jpg">
-          </div>
-          <div class="page7-6 page13-4"><img src="images/would-3.png"></div>
-          <div class="page13-5">
-               <div class="round">
-                   <div class="line"></div>                
-               </div>
-               <div class="round-in"></div>  
-          </div>
-
+     <div class="qr">微信扫我付押金<img src="images/qr-1.jpg" /></div>
+     <div class="qr">支付宝扫我付押金<img src="images/qr-2.jpg" /></div>
 </div>
-    <div class="page page14">
-      <div class="would-1 page14-1"></div>
-          <div class="page14-2">
-              <p></p>
-              <img src="images/10.jpg">
-          </div>
-          <div class="page7-6 page14-4"><img src="images/would-3.png"></div>
-          <div class="page14-5">
-               <div class="round">
-                   <div class="line"></div>                
-               </div>
-               <div class="round-in"></div>  
-          </div>
-
+<div class="right">
+     <p>联系人：张双敏<br />
+     联系人电话：13681028015<br />
+     地址：北京市朝阳区 望京广顺南大街16号sony大厦<br />
+     日期：2015年7月6日
+     </p>
+     <p style="margin-top:80px;">
+     项目标题：玩具租赁<br />
+     项目描述：玩具租赁押金收据。请妥善保存此收据，退换玩具时将根据此收据
+     退还押金。
+     </p>
+     <table cellpadding="0" cellspacing="0">
+        <thead>
+           <tr>
+             <th>玩具描述</th>
+             <th></th>
+             <th>数量</th>
+             <th>押金</th>
+           </tr>
+        </thead>
+        <tbody>
+           <tr>
+             <td>伟易达学习智立方【香港伟易达<br />vtech】</td>
+             <td></td>
+             <td>1</td>
+             <td><i>500</i></td>       
+           </tr>
+           <tr>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+           </tr>
+           <tr>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+           </tr>
+           <tr>
+             <td class="border-bottom"></td>
+             <td class="border-bottom"></td>
+             <td class="border-bottom"></td>
+             <td class="border-bottom"></td>
+           </tr>
+           <tr>
+             <td></td>
+             <td></td>
+             <td>小计</td>
+             <td><i>500</i></td>
+           </tr>
+           <tr>
+             <td class="border-bottom"></td>
+             <td class="border-bottom">税</td>
+             <td class="border-bottom" style="text-align:right;">0.00%</td>
+             <td class="border-bottom">¥<i>0</i></td>
+           </tr>
+           <tr>
+             <td class="border-bottom"></td>
+             <td class="border-bottom"></td>
+             <td class="border-bottom">总计</td>
+             <td class="border-bottom">¥<i>500</i></td>
+           </tr>
+        </tbody> 
+        
+     </table>
+     <p style="margin-top:130px;">每一件玩具，都是由团队的麻麻们精心挑选。<br />
+     我们正采购更多的玩具，让麻麻们尽可能花最少的钱，给宝宝最大的快乐
+     </p> 
+     <p style="margin-top:90px;">偷偷告诉你：如果秀出玩玩具的视频，可以免费玩3天哦！详情查看微信菜单。</p>
+     <p style="margin-top:160px;">唯爱与梦想不可辜负！</p>
+     <p style="margin-top:130px;">宝宝玩什么团队<br />
+        Love，Fun，Learn，</p>
+  </div>  
+  <div class="clear"></div>  
 </div>
-    <div class="page page15">
-      <div class="would-1 page15-1"></div>
-          <div class="page15-2">
-              <p></p>
-              <img src="images/11.jpg">
-          </div>
-          <div class="page7-6 page15-4"><img src="images/would-3.png"></div>
-          <div class="page15-5">
-               <div class="round">
-                   <div class="line"></div>                
-               </div>
-               <div class="round-in"></div>  
-          </div>
-
-       </div>
-        <div class="page page16">
-             <div class="would-1 page16-1"></div>
-             <div class="page16-2">
-                  <p></p>
-                  <img src="images/12.jpg">
-             </div>
-             <div class="page7-6 page16-4"><img src="images/would-3.png"></div>
-             <div class="page16-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div>
-         <div class="page page17">
-             <div class="would-1 page17-1"></div>
-             <div class="page17-2">
-                  <p></p>
-                  <img src="images/13.jpg">
-             </div>
-             <div class="page7-6 page17-4"><img src="images/would-3.png"></div>
-             <div class="page17-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div>
-        <div class="page page18">
-             <div class="would-1 page18-1"></div>
-             <div class="page18-2">
-                  <p></p>
-                  <img src="images/14.jpg">
-             </div>
-             <div class="page7-6 page18-4"><img src="images/would-3.png"></div>
-             <div class="page18-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div>
-        <div class="page page19">
-             <div class="would-1 page19-1"></div>
-             <div class="page19-2">
-                  <p></p>
-                  <img src="images/15.jpg">
-             </div>
-             <div class="page7-6 page19-4"><img src="images/would-3.png"></div>
-             <div class="page19-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div> 
-        <div class="page page20">
-             <div class="would-1 page20-1"></div>
-             <div class="page20-2">
-                  <p></p>
-                  <img src="images/16.png">
-             </div>
-             <div class="page7-6 page20-4"><img src="images/would-3.png"></div>
-             <div class="page20-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div> 
-        <div class="page page21">
-             <div class="would-1 page21-1"></div>
-             <div class="page21-2">
-                  <p></p>
-                  <img src="images/17.jpg">
-             </div>
-             <div class="page7-6 page21-4"><img src="images/would-3.png"></div>
-             <div class="page21-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div>
-        <div class="page page22">
-             <div class="would-1 page22-1"></div>
-             <div class="page22-2">
-                  <p></p>
-                  <img src="images/18.png">
-             </div>
-             <div class="page7-6 page22-4"><img src="images/would-3.png"></div>
-             <div class="page22-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div>
-        <div class="page page23">
-             <div class="would-1 page23-1"></div>
-             <div class="page23-2">
-                  <p></p>
-                  <img src="images/19.png">
-             </div>
-             <div class="page7-6 page23-4"><img src="images/would-3.png"></div>
-             <div class="page23-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div>
-        <div class="page page24">
-             <div class="would-1 page24-1"></div>
-             <div class="page24-2">
-                  <p></p>
-                  <img src="images/20.png">
-             </div>
-             <div class="page7-6 page24-4"><img src="images/would-3.png"></div>
-             <div class="page24-5">
-                  <div class="round">
-                       <div class="line"></div>                
-                  </div>
-                  <div class="round-in"></div>  
-             </div>
-        </div>
-        <div class="page page25">
-        <a name="page25"></a>
-         <div class="would-1 page25-1"></div>
-         <div class="would-2 page25-2"><img src="images/would-3.png"></div>
-         <div class="would-3 page25-3"></div>
-         <div class="page5-3">
-              <div class="flower1"><img src="images/flower1.png"></div>
-              <div class="flower2"><img src="images/flower2.png"></div>
-              <div class="flower3"><img src="images/flower3.png"></div>
-              <div class="flower4"><img src="images/flower4.png"></div>
-              <div class="flower5"><img src="images/flower5.png"></div>
-              <div class="flower6"><img src="images/flower6.png"></div>
-              <div class="flower7"><img src="images/flower7.png"></div>
-              <div class="flower8"><img src="images/flower8.png"></div>
-              <div class="flower9"><img src="images/flower9.png"></div>
-         </div>
-         <div class="logo logo-1"><img src="images/logo.png"></div>
-         <div class="page25-4"><img src="images/page25-2.png"></div>
-         <div class="page25-5">
-              <button class="btn btn-orange">我想送</button>
-              <button class="btn btn-purple">我想要</button>
-         </div>
-    </div>
-</div>
-</div>
-=======
-         66666666666666666666
-    </div>
-    <div class="page page7">
-         77777777777777777777
-    </div>
-    <div class="page page8">
-         88888888888888888888
-    </div>
-</div>
-</div>
-<!--<div id='mySwipe' style='position:fixed; z-index:100000;width:100% !important; height:100px;' class='swipe'>
-       <div class='swipe-wrap' style="z-index:100000;height:100px;">
-       <div><b><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>  
-       <div><b class="clearfix"><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>  
-       <div><b class="clearfix"><em><img src="images/p1.jpg"></em><em><img src="images/p2.jpg"></em><em><img src="images/p3.jpg"></em><em><img src="images/p4.jpg"></em><em><img src="images/p5.jpg"></em></b></div>   
-  </div>-->
->>>>>>> origin/gh-pages
-<script src="js/zepto.min.js"></script> 
-<script src="js/zepto.fullpage.js"></script> 
-<script>
-   $('.wp-inner').fullpage({
-<<<<<<< HEAD
-	   
-     });	
-</script>
-<script>
-$(function(){
-    $("#subcodeDialog").click(function(){
-		
-		$("#uedcool").css("display","block");
-	});
-});
-$(function(){
-	$("#ToPage25").on("touchstart",function(){
-		
-	    $.fn.fullpage.moveTo(25);	
-	});
-	$("#ToPage2").on("touchstart",function(){
-		$("#uedcool").css("display","none");  
-        window.location.href="index-2.html";
-	});
-});
-=======
-        afterChange: function (e) {
-                if (e.cur == 0) {
-                 $(".swipe").fadeIn();
-             } else {
-                 $(".swipe").css("display","none");
-             }
-            }
-     });	
-</script> 
-<script src="js/jquery-2.1.1.min.js"></script>    
-<script type="text/javascript">
->>>>>>> origin/gh-pages
-      function validata(){   
-        if($("#input-num").val()==""){   
-	    	$("#error-tip").css("display","block");  
-            $("#error-tip").html("请输入保单号");               
-            return false;   
-        }   
-		 if($("#input-name").val()==""){   
-	    	$("#error-tip-name").css("display","block");  
-            $("#error-tip-name").html("请输入姓名");               
-            return false;   
-        }  
-    }      
-<<<<<<< HEAD
-    function isNumber(obj){   
-=======
-    function isString(obj){   
->>>>>>> origin/gh-pages
-        reg=/^[1-9]\d*$/;   
-        if(!reg.test(obj)){   
-            $("#error-tip").css("display","block");  
-			$("#error-tip").html("请输入正确保单号");    
-        }else{    
-			$("#error-tip").css("display","none");  
-			$(".yes").css("display","block");  
-			$(".enter").addClass("success");
-        }   
-    }   
-	  function isString(obj){   
-        reg=/^([\u4e00-\u9fa5]+|([a-z]+\s?)+)$/;   
-        if(!reg.test(obj)){   
-	   	    $("#error-tip-name").css("display","block");  
-            $("#error-tip-name").html("请输入正确姓名");   
-        }else{   
-            $("#error-tip-name").html(""); 
-			$(".yes").css("display","block");  
-			$(".enter").addClass("success");  
-        }   
-    }   
-    
-<<<<<<< HEAD
-=======
-   document.getElementById("check").onsubmit = function() {
-    if(validata()) {
-        window.location.href = "#page2"; // 如果想继续提交到action对应的链接，返回true即可
-    } else {
-        return false;
-    }
-}
->>>>>>> origin/gh-pages
-</script>
-<script>
- $(function(){
-	var is_open='on';
-	//var id = document.getElementById("loading");
-    //setTimeout(function(){document.body.removeChild(id)},1000);
-    if($("#audio_btn").attr("url").indexOf("mp3")>1){
-	
-	  var auto = is_open=='on' ? 'autoplay' : '';
-	  var html = '';
-	$("#audio_btn").attr("class","autoplay"); 
-	  
-	  $("#audio_btn").on('touchstart',function(){
-	
-		  var media = $("#media").get(0);
-		  var type = $("#audio_btn").attr("class");
-		  if(type=="on"){
-		    media.pause(); 
-			$("#audio_btn").attr("class","off");
-		  }else{
-			media.play();
-			$("#audio_btn").attr("class","on"); 
-	      }  
-	  })
-	 $("#play").on('touchstart',function(){
-	
-		  var type = $("#audio_btn").attr("class");
-		  var media = $("#media").get(0);
-		  if(type=="autoplay"){
-		  media.play();
-		  }
-		  $("#play").hide();
-	  });
-    }	
-	
-}); //右上角，音乐播放器
-
-</script>
-
-<script>
-$(function(){
-	$(".swipe-wrap div").eq(0).css("display","block").siblings().css("display","none");
-	$(".swipe-wrap").click(function(){
-		var css1 = $(".swipe-wrap div").eq(0).css("display","block").siblings().css("display");	
-		if( css1 == "none"){
-		    $(".swipe-wrap").css("height","100%");
-		    $(".swipe-wrap div").eq(0).css("display","none").siblings().css("display","block");
-	    }
-		else{
-		    $(".swipe-wrap").css("height","auto");
-		    $(".swipe-wrap div").eq(0).css("display","block").siblings().css("display","none");	
-		}
-	});
-
-});
-</script>
-
-<script src='js/swipe.js'></script>
-<script>
-
-<<<<<<< HEAD
-=======
-// pure JS
-var elem = document.getElementById('mySwipe');
-window.mySwipe = Swipe(elem, {
-  // startSlide: 4,
-  // auto: 3000,
-  // continuous: true,
-  // disableScroll: true,
-  // stopPropagation: true,
-  // callback: function(index, element) {},
-  // transitionEnd: function(index, element) {}
-});
-
-// with jQuery
-// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
-
-</script>
-<script>
-$(function(){
-     $('.page2').bind("touchstart",function(){
-	    if($('.page2').hasClass("cur")){
-		     $(".swipe").css("opacity","1");
-	    }
-	    else{
-	         // alert(222);   
-             $(".swipe").css("opacity","0");
-	    }
-     });		
-});
-</script>
-
-
->>>>>>> origin/gh-pages
+<div class="footer">1</div>
 </body>
 </html>
